@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Service
+MimeType=video/*;
+Actions=addcrc32;
+#X-KDE-Submenu=Anime Check
+Icon=checkbox-checked-symbolic
+
+[Desktop Action addcrc32]
+Name=Add CRC32
+Icon=checkbox-checked-symbolic
+Exec=animecheck.py --add-hash-mode=always %U

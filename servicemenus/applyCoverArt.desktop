@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Service
+MimeType=inode/directory;
+Actions=applyCoverArt;
+#X-KDE-Submenu=Cover Art Options
+Icon=insert-image-symbolic
+
+[Desktop Action applyCoverArt]
+Name=Apply Cover Art
+Icon=insert-image-symbolic
+Exec=echo -e "[Desktop Entry]\nIcon=./.folder.jpg" > "%U/.directory"

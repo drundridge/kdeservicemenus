@@ -1,0 +1,17 @@
+[Desktop Entry]
+Type=Service
+MimeType=inode/directory;
+Actions=tagAirdate;tagPinned
+X-KDE-Submenu=Anime Folder Tags
+Icon=tag-symbolic
+
+
+[Desktop Action tagAirdate]
+Name=Airdate
+Icon=tag-recents
+Exec=setfattr -n user.xdg.tags -v "$(grep -o -P '(?<=\\[).*(?=\\])' <<< %U)" -h "$(readlink -f %U)"
+
+[Desktop Action tagPinned]
+Name=As Pinned
+Icon=tag-new
+Exec=setfattr -n user.xdg.tags -v "Pinned" -h "$(readlink -f %U)"

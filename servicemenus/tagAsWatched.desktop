@@ -1,0 +1,21 @@
+[Desktop Entry]
+Type=Service
+MimeType=video/*
+Actions=tagAsUnwatched;tagAsWatched;tagAsOther;
+X-KDE-Submenu=Set Watched Status
+Icon=tag-symbolic
+
+[Desktop Action tagAsWatched]
+Name=Watched
+Icon=tag-recents
+Exec=setfattr -n user.xdg.tags -v Watched -h "$(readlink -f %U)"
+
+[Desktop Action tagAsUnwatched]
+Name=Unwatched
+Icon=tag-new
+Exec=setfattr -x user.xdg.tags -h "$(readlink -f %U)"
+
+[Desktop Action tagAsOther]
+Name=Other
+Icon=folder-tag
+Exec=setfattr -n user.xdg.tags -v Other -h "$(readlink -f %U)"
