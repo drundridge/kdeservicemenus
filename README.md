@@ -11,9 +11,9 @@ Note: These are designed for media libraries where all directories are already n
 Sets folder icon to cover art from various sources
 - For all selected folders, rip cover art from MAL and apply to each as icons
 - For 1 selected folder, manually set the icon to an existing .folder.png in the folder
-- For all selected folders, convert any with obsolute .jpeg icons to .png now that KDE has dropped support for them
+- For all selected folders, convert any with obsolete .jpg icons to .png now that KDE has dropped support them (you probably don't need this)
 
-Download: | [applyCoverArt.desktop](/servicemenus/applyCoverArt.desktop) | [scripts/downloadCoverArt.sh](/servicemenus/scripts/downloadCoverArt.sh) | [scripts/fixCoverArt.sh](/servicemenus/scripts/fixCoverArt.sh)
+Download: | [applyCoverArt.desktop](/servicemenus/applyCoverArt.desktop) | [scripts/downloadCoverArt.sh](/servicemenus/scripts/downloadCoverArt.sh) | [scripts/jpgToPngCoverArt.sh](/servicemenus/scripts/fixCoverArt.sh)
 
 ### Anime Series - Group by Year/Season/Airdate
 Configures series in the library to group into sections by season
@@ -23,7 +23,7 @@ Configures series in the library to group into sections by season
 Usage Notes
 - `Show in Groups` and `Sort by Tag` must be set in Dolphin to actually _see_ the season groups applied.
 
-Download: | [tagWithAirdate](/servicemenus/tagWithAirdate.desktop)
+Download: | [tagWithAirdate](/servicemenus/tagWithAirdate.desktop) | [/scripts/tagWithAirdate.sh](/servicemenus/tagWithAirdate.sh) 
 
 ### Anime Episode - Tag as Watched/Unwatched
 Sets episodes in a series' folder to group by watched/unwatched status
@@ -41,7 +41,7 @@ Download: | [tagAsWatched.desktop](/servicemenus/tagAsWatched.desktop) | [/scrip
 - Split selected jpgs into left and right sides (dual page spreads, etc)
 - Split selected jpgs into DVD front, spine and back faces
 
-Download: | [imageStuff.desktop](/servicemenus/imageStuff.desktop) 
+Download: | [imageStuff.desktop](/servicemenus/imageStuff.desktop)
 
 ### Apply CRC32
 Applies CRC32 to end of a 1 selected file per Nyaa conventions. Your famsub now looks slightly more professional.
