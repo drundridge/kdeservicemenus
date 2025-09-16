@@ -1,17 +1,22 @@
 [Desktop Entry]
 Type=Service
 MimeType=image/*
-Actions=SplitHorizontally;SplitHorizontallyDVD
-X-KDE-Submenu=Image Scriptions
+Actions=SplitHorizontally;SplitHorizontallyDVD;ConvertToPng
+X-KDE-Submenu=Image Scripts
 Icon=image
 
 
 [Desktop Action SplitHorizontally]
 Name=Split Horizontally
 Icon=tag-recents
-Exec=convert %U -crop 50%x100% +repage %U.jpg
+Exec=magick %U -crop 50%x100% +repage %U.jpg
 
 [Desktop Action SplitHorizontallyDVD]
 Name=Split DVD Cover
 Icon=tag-recents
-Exec=convert %U -crop 53%x100% +repage %U.jpg
+Exec=magick %U -crop 53%x100% +repage %U.jpg
+
+[Desktop Action ConvertToPng]
+Name=Convert to PNG
+Icon=tag-recents
+Exec=magick %U %U.png

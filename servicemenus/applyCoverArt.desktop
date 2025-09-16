@@ -1,11 +1,22 @@
 [Desktop Entry]
 Type=Service
 MimeType=inode/directory;
-Actions=applyCoverArt;
-#X-KDE-Submenu=Cover Art Options
-Icon=insert-image-symbolic
+Actions=applyCoverArt;downloadCoverArt;fixCoverArt
+Icon=albumfolder-importimages
+X-KDE-Submenu=Anime - Apply Cover Art
+X-KDE-Priority=TopLevel
 
 [Desktop Action applyCoverArt]
-Name=Apply Cover Art
-Icon=insert-image-symbolic
-Exec=echo -e "[Desktop Entry]\nIcon=./.folder.jpg" > "%U/.directory"
+Name=Reapply Current
+Icon=albumfolder-importimages
+Exec=echo -e "[Desktop Entry]\nIcon=./.folder.png" > "%U/.directory"
+
+[Desktop Action downloadCoverArt]
+Name=Auto-Download from MAL and Apply
+Icon=download
+Exec=~/.local/share/kio/servicemenus/scripts/downloadCoverArt.sh %U
+
+[Desktop Action fixCoverArt]
+Name=Convert obsolete JPG icons to PNG
+Icon=widget-alternatives
+Exec=~/.local/share/kio/servicemenus/scripts/fixCoverArt.sh %U

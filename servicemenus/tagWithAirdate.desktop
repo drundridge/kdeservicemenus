@@ -2,16 +2,17 @@
 Type=Service
 MimeType=inode/directory;
 Actions=tagAirdate;tagPinned
-X-KDE-Submenu=Anime Folder Tags
+X-KDE-Submenu=Anime - Apply Tag Seperator
 Icon=tag-symbolic
-
+X-KDE-Priority=TopLevel
 
 [Desktop Action tagAirdate]
 Name=Airdate
 Icon=tag-recents
-Exec=setfattr -n user.xdg.tags -v "$(grep -o -P '(?<=\\[).*(?=\\])' <<< %U)" -h "$(readlink -f %U)"
+#Exec=setfattr -n user.xdg.tags -v "$(grep -o -P '(?<=\\[).*(?=\\])' <<< %U)" -h "$(readlink -f %U)"
+Exec=~/.local/share/kio/servicemenus/scripts/tagWithAirdate.sh %U
 
 [Desktop Action tagPinned]
-Name=As Pinned
+Name=Pinned
 Icon=tag-new
 Exec=setfattr -n user.xdg.tags -v "Pinned" -h "$(readlink -f %U)"
