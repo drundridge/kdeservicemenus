@@ -1,10 +1,56 @@
 # kdeservicemenus
-Context menus for retards
+KDE context menu options for weebs
 
-| Link | Description |
-| --- | --- |
-| [applyCoverArt](/servicemenus/applyCoverArt.desktop) | Apply Poster Art as Folder Icon |
-| [tagWithAirdate](/servicemenus/tagWithAirdate.desktop) | Tags folders with text within square brackets |
-| [tagAsWatched](/servicemenus/tagAsWatched.desktop) | Tags media as Watched or Unwatched |
-| [crc32](/servicemenus/crc32.desktop) | Apply CRC32 in anime fansub format |
-| [shred](/servicemenus/shred.desktop) | Delete File |
+## Installation
+Save to `~/.local/share/kio/servicemenus/` and `~/.local/share/kio/servicemenus/scripts/` and Dolphin will immediately show these options
+
+Note: These are designed for media libraries where all series are already named in the format "[2025 Q3] CITY THE ANIMATION", which provides these scripts the neccecary information to function.
+
+## Dolphin Context Menu Options
+### Anime Series - Apply Cover Art as Icon
+Sets folder icon to cover art from various sources
+- For all selected folders, rip cover art from MAL and apply to each as icons
+- For 1 selected folder, manually set the icon to an existing .folder.png in the folder
+- For all selected folders, convert any with obsolute .jpeg icons to .png now that KDE has dropped support for them
+
+Download: | [applyCoverArt.desktop](/servicemenus/applyCoverArt.desktop) | [scripts/downloadCoverArt.sh](/servicemenus/scripts/downloadCoverArt.sh) | [scripts/fixCoverArt.sh](/servicemenus/scripts/fixCoverArt.sh)
+
+### Anime Series - Group by Year/Season/Airdate
+Configures series in the library to group by season in Dolphin whe
+- For all selected folders, enable season grouping
+- For 1 selected folder, set as "Pinned" to appear above everything else
+
+Usage Notes
+- `Show in Groups` and `Sort by Tag` must be set in Dolphin to actually _see_ the season groups applied.
+
+Download: | [tagWithAirdate](/servicemenus/tagWithAirdate.desktop)
+
+### Anime Episode - Tag as Watched/Unwatched
+Configures episodes in a series folder to group by watched/unwatched status
+
+Designed to work alongside the [.autotag.lua](https://github.com/drundridge/mpvscripts/) to apply bulk changes (ie: if watched elsewhere)
+- For all selected episodes, tag as Watched to move them below everything
+- For all selected episodes, remove tags (unwatched) to appear at the top
+- For all selected episodes, tag as Other to move junk folders out of the way
+
+Download: | [tagAsWatched.desktop](/servicemenus/tagAsWatched.desktop) | [/scripts/tagAsWatched.sh](/servicemenus/scripts/tagAsWatched.sh) | [/scripts/tagAsUnwatched.sh](/servicemenus/scripts/tagAsUnwatched.sh) | [/scripts/tagAsOther.sh](/servicemenus/scripts/tagAsOther.sh) 
+
+### Bulk Image Converter
+- Convert selected images to jpg
+- Convert selected images to png
+- Split selected jpgs into left and right sides (dual page spreads, etc)
+- Split selected jpgs into DVD back, spine and right faces
+
+Note: Removing the double filenames and back covers requires addiional script files and I'd rather just keep this it in one file
+
+Download: | [imageStuff.desktop](/servicemenus/imageStuff.desktop) 
+
+### Apply CRC32
+Applies CRC32 to end of a 1 selected file per Nyaa conventions. Your famsub now looks slightly more professional.
+
+Download: | [crc32](/servicemenus/crc32.desktop)
+
+### Shred
+Deletes stuff.
+
+Download: | [shred](/servicemenus/shred.desktop)
