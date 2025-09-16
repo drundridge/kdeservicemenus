@@ -28,7 +28,7 @@ Download: | [tagWithAirdate](/servicemenus/tagWithAirdate.desktop) | [/scripts/t
 ### Anime Episode - Tag as Watched/Unwatched
 Sets episodes in a series' folder to group by watched/unwatched status
 
-Designed to compliment the [.autotag.lua](https://github.com/drundridge/mpvscripts/) MPV autotag after the episode is finished script, to apply bulk changes at once (ie: if watched elsewhere)
+Designed to compliment the [autotag.lua](https://github.com/drundridge/mpvscripts/) MPV autotag-after-the-episode-is-finished script, to apply bulk changes at once (ie: if watched elsewhere)
 - For all selected episodes, tag as Watched to move them below everything
 - For all selected episodes, remove tags (unwatched) to appear at the top
 - For all selected files, tag as Other, to move junk non-episode files like the NCOP/NCED out of the way
@@ -44,11 +44,13 @@ Download: | [tagAsWatched.desktop](/servicemenus/tagAsWatched.desktop) | [/scrip
 Download: | [imageStuff.desktop](/servicemenus/imageStuff.desktop)
 
 ### Apply CRC32
-Applies CRC32 to end of a 1 selected file per Nyaa conventions. Your famsub now looks slightly more professional.
+Applies CRC32 to the end of a 1 selected file's filename per Nyaa conventions. Your fansub now looks slightly more professional.
 
-Download: | [crc32](/servicemenus/crc32.desktop)
+Requires OmegaPhil's [animecheck.py](https://github.com/OmegaPhil/animecheck)
+
+Download: | [crc32.desktop](/servicemenus/crc32.desktop)
 
 ### Shred
 Deletes stuff.
 
-Download: | [shred](/servicemenus/shred.desktop)
+Download: | [shred.desktop](/servicemenus/shred.desktop)
